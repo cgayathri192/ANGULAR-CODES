@@ -1,0 +1,25 @@
+<div class="sidebar">
+    <div class="logo">
+        <ul>
+            <li *ngFor="let data of sidebardata; let i=index">
+                <span (click)="toggleSideMenu(i)">
+                    
+                    {{data.title}}
+                <i *ngIf="data?.childrens" class="fa" 
+                   [ngClass]="data.isopen? 'fa-angle-up' : 'fa-angle-down' "></i>
+                </span>
+
+                
+
+                <ul *ngIf="data?.childrens && data.isopen">
+                    <li *ngFor="let child of data?.childrens" [routerLink]="child.link">
+                        {{child.title}}
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</div>

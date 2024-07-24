@@ -1,0 +1,19 @@
+.sidebar{
+    height:100vh;
+    background: black;
+    ul{
+        list-style: none;
+        li{
+            color:white;
+            cursor:pointer;
+            padding: 10px;
+            text-transform: capitalize;
+            .fa-angle-down{
+                font-size:20px;
+            }
+            &:hover{
+                background-color: rgba(255,255,255,0.4);
+            }
+        }
+    }
+}
